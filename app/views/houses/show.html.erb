@@ -1,0 +1,11 @@
+<h2><%= @house.name %> <a href="/houses/<%= @house.id %>/edit">(edit)</a></h2>
+<h4><%= @house.motto %></h4>
+
+<h3>Characters <%= link_to "(+)", new_house_path(@house) %></h3>
+<ul>
+  <% @house.characters.each do |char| %>
+    <li>
+      <%= link_to "#{char.name}", house_character_path(char) %>
+    </li>
+  <% end %>
+</ul>

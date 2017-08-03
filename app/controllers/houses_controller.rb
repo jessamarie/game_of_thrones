@@ -1,6 +1,6 @@
 class HousesController < ApplicationController
   def index
-    @house = House.all
+    @houses = House.all
   end
 
   def show
@@ -29,9 +29,11 @@ class HousesController < ApplicationController
   def destroy
     @house = House.find(params[:id])
     @house.destroy
+    redirect_to houses_path
   end
 
   private
   def house_params
+    params.require(:house).permit(:name, :motto)
   end
 end

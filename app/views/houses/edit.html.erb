@@ -1,0 +1,7 @@
+<h2>Edit House</h2>
+
+<%= render 'form' %>
+
+<%= form_for @house, method: :delete do |f| %>
+  <%= f.submit "Delete!", class: "delete" %>
+<% end %>
