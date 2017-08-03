@@ -18,7 +18,7 @@ class CharactersController < ApplicationController
     @character = @house.characters.create!(character_params)
     flash[:notice] = "Character was created."
 
-    redirect_to house_character_path(@character)
+    redirect_to house_character_path(@house, @character)
   end
 
   def edit
@@ -27,7 +27,7 @@ class CharactersController < ApplicationController
   end
 
   def update
-    @house = Post.find(params[:house_id])
+    @house = House.find(params[:house_id])
     @character = Character.find(params[:id])
     @character.update(character_params)
     flash[:notice] = "Character was Updated."
