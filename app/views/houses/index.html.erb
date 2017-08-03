@@ -1,11 +1,12 @@
-<h2>Houses <a href="/houses/new">(+)</a></h2>
-
-<ul>
+<ul class="houses">
   <% @houses.each do |house| %>
-    <li>
+    <li class="house">
       <a href="/houses/<%= house.id %>">
         <%= house.name %>
       </a>
     </li>
   <% end %>
+
+  <li><h3><%= link_to "Create New House", new_house_path %></h3></li>
+
 </ul>

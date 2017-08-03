@@ -1,3 +1,24 @@
 // Place all the styles related to the Houses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.houses {
+  padding: 10px 0;
+}
+
+.house {
+  padding: 10px 0;
+}
+
+h3 { font-size: 20px; }
+
+li h3 { padding: 20px 0;}
+
+h4 { font-size: 18px; }
+
+.motto {
+  font-style: italic;
+  padding: 10px;
+}
+
+h5 { font-size: 10px; }

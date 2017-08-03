@@ -1,2 +1,5 @@
-<h2><%= @character.name %> <%= link_to "(edit)", edit_house_character_path(@character.house, @character)  %> </h2>
-<p>House: <%= @character.house.name%></br></p>
+<div class="character">
+  <h3><%= @character.name %></h3>
+  <p>House: <%= @character.house.name%></br></p>
+  <h3><%= link_to "Edit Character", edit_house_character_path(@character.house, @character)  %> | <%= link_to "Return to House", house_path(@character.house) %></h3>
+<div>
